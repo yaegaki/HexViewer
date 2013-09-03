@@ -69,6 +69,10 @@ HexViewer = (function(){
 
 			}
 		}
+
+		this.getDownloadURL = function(){
+			return URL.createObjectURL(new Blob([_data]));
+		}
 	}
 
 	return HexViewer;
