@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/HexViewer.css" />
+	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="js/HexViewer.js"></script>
+	<style type="text/css">
+		body{
+			background:#eee;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+				$("button").on("click",function(){
+					var v = new HexViewer("example");
+					v.setData($("input[type='text']").val());
+				});
+		});
+	</script>
+</head>
+<body>
+	<h1>HexViewer</h1>
+	<div>
+	<input type="text" /><button>view</button>
+</div>
+	<div class="HexViewer" id="example"></div>
+</body>
+</html>
